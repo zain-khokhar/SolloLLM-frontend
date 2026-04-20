@@ -463,11 +463,17 @@ export interface Citation {
   excerpt: string;
 }
 
+export interface EmbeddingInfo {
+  model: string;
+  dimension: number;
+  fallback: boolean;
+}
+
 export interface RAGStats {
   workspace_id: string;
   document_count: number;
   chunk_count: number;
-  embedding_info: Record<string, unknown>;
+  embedding_info: EmbeddingInfo;
 }
 
 // ── Training types ──────────────────────────────────────────
